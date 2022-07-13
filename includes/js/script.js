@@ -53,3 +53,30 @@ selectObj.options[ind - 1].selected = true;
 //     document.getElementById('inlineFormSelectPref1').innerHTML +=
 //         `<option value="${index + 1}">${element.name}</option>`;
 // });
+
+
+// search bar function
+const searchInput = document.getElementById('search');
+const listItems = document.querySelectorAll('.accordion-item');
+
+searchInput.addEventListener('input', () => {
+  const filter = searchInput.value.toLowerCase();
+  showList();
+  const valueExist = !!filter.length;
+
+  if (valueExist) {
+    listItems.forEach((el) => {
+      const elText = el.textContent.trim().toLowerCase();
+      const isIncluded = elText.includes(filter);
+      if (!isIncluded) {
+        el.style.display = 'none';
+      }
+    });
+  }
+});
+
+const showList = () => {
+  listItems.forEach((el) => {
+    el.style.display = 'block';
+  });
+};
