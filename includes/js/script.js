@@ -70,6 +70,8 @@ searchInput.addEventListener('input', () => {
       const isIncluded = elText.includes(filter);
       if (!isIncluded) {
         el.style.display = 'none';
+        el.nextElementSibling.style.display = 'none';
+
       }
     });
   }
@@ -78,5 +80,7 @@ searchInput.addEventListener('input', () => {
 const showList = () => {
   listItems.forEach((el) => {
     el.style.display = 'block';
+    el.nextElementSibling.style.display = 'block';
+    
   });
 };
