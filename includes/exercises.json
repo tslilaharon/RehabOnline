@@ -19,6 +19,41 @@
             "ex_information": "focus the lower body, glutes, hamstrings, quads, hips, calves, and shins. ",
             "ex_image": "./images/t3.png",
             "ex_video": "./videos/jumpingJacks.mp4"
+        },
+        {
+            "ex_id": 4,
+            "ex_title": "Lunges",
+            "ex_information": "focus the hamstrings (back of thighs) and glute max.",
+            "ex_image": "./images/t4.png",
+            "ex_video": "./videos/lunges.mp4"
+        },
+        {
+            "ex_id": 5,
+            "ex_title": "Squats",
+            "ex_information": "focus the quadriceps, glutes, hamstrings and calves.",
+            "ex_image": "./images/t5.png",
+            "ex_video": "./videos/squats.mp4"
+        },
+        {
+            "ex_id": 6,
+            "ex_title": "Burpees",
+            "ex_information": "full body aerobic workout.",
+            "ex_image": "./images/t6.png",
+            "ex_video": "./videos/burpees.mp4"
+        },
+        {
+            "ex_id": 7,
+            "ex_title": "Push Ups",
+            "ex_information": "focus on upper body.",
+            "ex_image": "./images/t7.png",
+            "ex_video": "./videos/pushups.mp4"
+        },
+        {
+            "ex_id": 8,
+            "ex_title": "Pull Ups",
+            "ex_information": "focus on back and biceps.",
+            "ex_image": "./images/t8.png",
+            "ex_video": "./videos/pullups.mp4"
         }
     ]
 }
