@@ -93,10 +93,11 @@ li a img {
 }
 
 .firstRow .card-body:first-child {
-    padding-top: 100px;
+    /* padding-top: 100px;
     padding-bottom: 200px;
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 50px; */
+    padding: 100px 50px 200px;
 }
 
 .treatmentImg {
