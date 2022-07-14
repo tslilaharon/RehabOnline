@@ -81,6 +81,6 @@ const showList = () => {
   listItems.forEach((el) => {
     el.style.display = 'block';
     el.nextElementSibling.style.display = 'block';
-    
+
   });
 };
