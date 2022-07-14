@@ -1,0 +1,58 @@
+[
+    {
+      "ex_id": 1,
+      "ex_title": "Reverse Lunges",
+      "ex_information": "focus the hamstrings (back of thighs) and glute max.",
+      "ex_image": "./images/t1.png",
+      "ex_video": "./videos/reverseLunges.mp4"
+    },
+    {
+      "ex_id": 2,
+      "ex_title": "Skater Jumps",
+      "ex_information": "focus the quadriceps, glutes, hamstrings and calves.",
+      "ex_image": "./images/t2.png",
+      "ex_video": "./videos/skaterJumps.mp4"
+    },
+    {
+      "ex_id": 3,
+      "ex_title": "Jumping Jacks",
+      "ex_information": "focus the lower body, glutes, hamstrings, quads, hips, calves, and shins. ",
+      "ex_image": "./images/t3.png",
+      "ex_video": "./videos/jumpingJacks.mp4"
+    },
+    {
+      "ex_id": 4,
+      "ex_title": "Lunges",
+      "ex_information": "focus the hamstrings (back of thighs) and glute max.",
+      "ex_image": "./images/t4.png",
+      "ex_video": "./videos/lunges.mp4"
+    },
+    {
+      "ex_id": 5,
+      "ex_title": "Squats",
+      "ex_information": "focus the quadriceps, glutes, hamstrings and calves.",
+      "ex_image": "./images/t5.png",
+      "ex_video": "./videos/squats.mp4"
+    },
+    {
+      "ex_id": 6,
+      "ex_title": "Pushups",
+      "ex_information": "focus the chest, triceps, biceps, and shoulders.",
+      "ex_image": "./images/t6.png",
+      "ex_video": "./videos/pushups.mp4"
+    },
+    {
+      "ex_id": 7,
+      "ex_title": "Pullups",
+      "ex_information": "focus the chest, triceps, biceps, and shoulders.",
+      "ex_image": "./images/t7.png",
+      "ex_video": "./videos/pullups.mp4"
+    },
+    {
+      "ex_id": 8,
+      "ex_title": "Crunches",
+      "ex_information": "focus the abdominals, pelvis, and lower back.",
+      "ex_image": "./images/t8.png",
+      "ex_video": "./videos/crunches.mp4"
+    }
+]

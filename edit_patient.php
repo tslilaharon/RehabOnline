@@ -68,7 +68,7 @@
             <!-- form section -->
             <section class="container margin form">
                 <section class="container">
-                        <h1>Edit Patient Details</h1>
+                        <h1>Save Patient Details</h1>
                     <form action="save_patient.php">
 
                             <div class="mb-3">
@@ -82,8 +82,12 @@
                             </div>
                             
                             <div class="mb-3">
-                                <label for="address" class="form-label">Address</label>
-                                
+
+                                    <label class="form-label" for="address" class="form-label">Address</label>
+                                    <select id="address" class="select" name="address">
+                                        
+                                    </select>
+                                                                
                                 <div id="dataServices" class="mb-3">
 
                                 </div\>
@@ -105,7 +109,8 @@
             ?>
 
 	    </div>
-        <script src="includes/js/getjson.js"></script>
+        
+        <script src="includes/js/fetchCities.js"></script>
 	</body>
 
 </html>

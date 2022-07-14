@@ -262,7 +262,6 @@
 
     <?php if($result) mysqli_free_result($result);?>
 
-    <script src="includes/js/script.js"></script>
     <script src="includes/js/search.js"></script>
 </body>
 </html>

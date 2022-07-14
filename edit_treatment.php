@@ -44,6 +44,11 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
 
+        <!-- cdn Chart.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+        integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <!-- cdn font-awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
             integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -67,46 +72,73 @@
     </head>
 
 	<body>
+
         <main id="list-wrapper">
+
             <!-- form section -->
             <section class="container margin form">
                 <section class="container">
-                    <h1>Edit Treatment</h1>
+                        <h1>Save Treatment</h1>
                     <form action="save_treatment.php" method="get">
 
                             <div class="mb-3">
                                 <label for="treatTitle" class="form-label">Treatment Title</label>
-                                <input type="text" class="form-control" id="treatTitle" name="treatTitle">
+                                <input type="text" class="form-control" id="treatTitle" name="treatTitle" value="<?php echo $row["title"];?>">
                             </div>
 
                             <div class="mb-3">
                                 <label for="treatInfo" class="form-label">Treatment Information</label>
-                                <input type="text" class="form-control" id="treatInfo" name="treatInfo">
+                                <input type="text" class="form-control" id="treatInfo" name="treatInfo" value="<?php echo $row["info"];?>">
                             </div>
                             
                             <div class="mb-3">
                                 <label for="treatTime" class="form-label">Treatment Time</label>
-                                <input type="text" class="form-control" id="treatTime" name="treatTime">
+                                <input type="text" class="form-control" id="treatTime" name="treatTime" value="<?php echo $row["time"];?>">
                             </div>
 
                             <div class="mb-3">
                                 <label for="treatNumber_of_exs" class="form-label">The number of exercises</label>
-                                <input type="text" class="form-control" id="treatNumber_of_exs" name="treatNumber_of_exs">
+                                <input type="text" class="form-control" id="treatNumber_of_exs" name="treatNumber_of_exs" value="<?php echo $row["number_of_exs"];?>">
                             </div>
+
+                            <!-- <div class="mb-3">
+                                <label for="ex1" class="form-label">Ex1</label>
+                                <input type="text" class="form-control" id="ex1" name="ex1" value="<?php echo $row["ex1"];?>">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="ex2" class="form-label">Ex2</label>
+                                <input type="text" class="form-control" id="ex2" name="ex2" value="<?php echo $row["ex2"];?>">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="ex3" class="form-label">Ex3</label>
+                                <input type="text" class="form-control" id="ex3" name="ex3" value="<?php echo $row["ex3"];?>">
+                            </div> -->
+
+                            <!-- <section class="row mb-4 row-cols-lg-auto g-3 align-items-center" id="dropboxes">
+                            <article class="col">
+                                <div class="form-outline">
+                                    <label class="visually-hidden" for="ex1">Excercise 1</label>
+                                    <select id="ex1" class="select" name="ex1">
+                                        <option value="Reverse Lunges">Reverse Lunges</option>
+                                        <option value="Skater Jumps">Skater Jumps</option>
+                                        <option value="Jumping Jacks">Jumping Jacks</option>
+                                        <option value="One Legged Stand">One Legged Stand</option>
+                                        <option value="Push Ups">Push Ups</option>
+                                        <option value="Squats">Squats</option>
+                                        <option value="Situps">Situps</option>
+                                        <option value="Pull Ups">Pull Ups</option>
+                                    </select>
+                                </div>
+                            </article> -->
 
                             <section class="row mb-4 row-cols-lg-auto g-3 align-items-center" id="dropboxes">
                             <article class="col">
                                 <div class="form-outline">
                                     <label class="visually-hidden" for="ex1">Excercise 1</label>
                                     <select id="ex1" class="select" name="ex1">
-                                        <option value="1">Reverse Lunges</option>
-                                        <option value="2">Skater Jumps</option>
-                                        <option value="3">Jumping Jacks</option>
-                                        <option value="4">One Legged Stand</option>
-                                        <option value="5">Push Ups</option>
-                                        <option value="6">Squats</option>
-                                        <option value="7">Situps</option>
-                                        <option value="8">Pull Ups</option>
+                                        
                                     </select>
                                 </div>
                             </article>
@@ -115,14 +147,7 @@
                                 <div class="form-outline">
                                     <label class="visually-hidden" for="ex2">Excercise 2</label>
                                     <select id="ex2" class="select" name="ex2">
-                                        <option value="1">Reverse Lunges</option>
-                                        <option value="2">Skater Jumps</option>
-                                        <option value="3">Jumping Jacks</option>
-                                        <option value="4">One Legged Stand</option>
-                                        <option value="5">Push Ups</option>
-                                        <option value="6">Squats</option>
-                                        <option value="7">Situps</option>
-                                        <option value="8">Pull Ups</option>
+                                        
                                     </select>
                                 </div>
                             </article>
@@ -131,19 +156,23 @@
                                 <div class="form-outline">
                                     <label class="visually-hidden" for="ex3">Excercise 3</label>
                                     <select id="ex3" class="select" name="ex3">
-                                        <option value="1">Reverse Lunges</option>
-                                        <option value="2">Skater Jumps</option>
-                                        <option value="3">Jumping Jacks</option>
-                                        <option value="4">One Legged Stand</option>
-                                        <option value="5">Push Ups</option>
-                                        <option value="6">Squats</option>
-                                        <option value="7">Situps</option>
-                                        <option value="8">Pull Ups</option>
+                                        
                                     </select>
                                 </div>
 
                             </article>
                             </section>
+                            <!-- 
+                            <div class="mb-3">
+                                <label for="exercises" class="form-label">Select exercises</label>
+                                <select id="exercises" name="ExId"></select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exercises" class="form-label">Select exercises</label>
+                                <select id="exercises" name="ExId" onchange="getExercise(this.value)" disabled>
+                                    <option value="">Select exercise</option>
+                                </select>
+                            </div> -->
 
                             <input type="hidden" name="state" value="<?php echo $state;?>">
                             <input type="hidden" name="userId" value="<?php echo $userId;?>">
@@ -155,14 +184,18 @@
                         </form>
                     </section>
                 </section>
-        </main>
+            </main>
 
-		<?php 
-            //release returned data
-            if($result) mysqli_free_result($result);
-        ?>
 
+			<?php 
+			//release returned data
+			if($result) mysqli_free_result($result);
+            ?>
+
+	    </div>
+        <script src="includes/js/fetchExe.js"></script>
 	</body>
+
 </html>
 <?php
     //close DB connection
