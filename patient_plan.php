@@ -228,7 +228,7 @@
                                         echo            '</div>';
                                         echo            '<p>' . $row["info"] .'</p>';
                                         echo            '<div class="align-self-end">';
-                                        echo                '<a href="treatment.php?treatmentId='. $row["treatment_id"] .'" class="btn btn-outline-primary">More</a>';
+                                        echo                '<a href="treatment.php?userId='. $row["user_id"] .'&treatmentId='. $row["treatment_id"]  .'" class="btn btn-outline-primary">More</a>';
                                         echo            '</div>';
                                         echo        '</div>';
                                         echo    '</div>';

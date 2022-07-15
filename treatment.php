@@ -12,8 +12,15 @@
 <?php 
 	//get data from DB
 	$treatmentId = $_GET["treatmentId"];
+    $userId = $_GET["userId"];
 
-    $query = "SELECT * FROM tbl_rehab_treatments_221 WHERE t.treatment_id = $treatmentId";
+    //$query = "SELECT * FROM tbl_rehab_treatments_221 WHERE treatment_id = $treatmentId";
+    $query = "SELECT * FROM tbl_rehab_treatments_221 AS t
+    JOIN tbl_rehab_treatment_plan_221 AS p
+    ON t.plan_id = p.plan_id
+    JOIN tbl_rehab_users_221 AS u
+    ON p.user_id = u.user_id
+    WHERE u.user_id = $userId";
 
     $result = mysqli_query($connection, $query);
     if($result) {
@@ -23,17 +30,16 @@
         die("DB query failed.");
         header('Location: ' . URL . 'err.php');
     }
+    $ex1 = $row["ex1"];
+    echo $ex1;
+    $ex2 = $row["ex2"];
+    $ex3 = $row["ex3"];
 
-    $query1 = "SELECT * FROM tbl_rehab_exe_221 WHERE id = $row["ex1"] OR id = $row["ex2"] OR id = $row["ex3"]";
-
+    
+    $query1 = "SELECT * FROM tbl_rehab_exe_221 WHERE id = $ex1 OR id = $ex2 OR id = $ex3";
     $result1 = mysqli_query($connection, $query1);
-    if($result1) {
-        $row1 = mysqli_fetch_assoc($result1);//there is only 1 with id=X
-    }
-    else {
-        die("DB query failed.");
-        header('Location: ' . URL . 'err.php');
-    }
+    
+
 ?>
 
 <!DOCTYPE html>
@@ -196,22 +202,22 @@
                                 <table class="table align-middle mb-0 bg-white">
                                     <tbody>
                                     <?php 
-                                        while($row = mysqli_fetch_assoc($result)) {
-                                            // $img = $row["user_image"];
-                                            $img = null;
+                                        while($row1 = mysqli_fetch_assoc($result1)) {
+                                            $img = $row1["img"];
+                                            //$img = null;
                                             if(!$img) $img = "images/t1.png";
                                             echo '<tr>';
                                             echo    '<td>';
                                             echo        '<article class="d-flex align-items-center">';
                                             echo            '<img src="' . $img . '" alt="Treatment img" title="Treatment img" class="treatmentImg" />';
                                             echo            '<div class="ms-3">';
-                                            echo                '<p class="fw-bold mb-1">' . $row["sets"] . '</p>';
-                                            echo                '<p class="text-muted mb-0">' . $row["sets"] . '</p>';
+                                            echo                '<p class="fw-bold mb-1">' . $row1["title"] . '</p>';
+                                            echo                '<p class="text-muted mb-0">' . $row1["info"] . '</p>';
                                             echo            '</div>';
                                             echo        '</article>';
                                             echo    '</td>';
                                             echo    '<td>';
-                                            echo        '<a href="patient_plan.php?exId='. $row["ex_id"] .'" class="btn"> <i class="fa-solid fa-ellipsis-vertical"></i></a>';
+                                            echo        '<a href="#" class="btn"> <i class="fa-solid fa-ellipsis-vertical"></i></a>';
                                             echo    '</td>';
                                             echo '</tr>';
                                         }
@@ -242,6 +248,7 @@
 
         <?php if($result) mysqli_free_result($result);?>
         <?php if($result1) mysqli_free_result($result1);?>
+
 
     </body>
 </html>
