@@ -30,12 +30,12 @@
 	//SET: insert/update data in DB
 
 	if ($state == "insert") {
-		$query = "insert into tbl_rehab_treatments_221(plan_id,title,info,time,treatment_status) values ('$planId','$treatTitle','$treatInfo',,'$treatTime','$treatStatus', '$ex1' , '$ex2' , '$ex3')";
+		$query = "INSERT INTO tbl_rehab_treatments_221(`plan_id`,`title`,`info`,`time`,`treatment_status`,`ex1`,`ex2`,`ex3`) VALUES ('$planId','$treatTitle','$treatInfo',,'$treatTime','$treatStatus', '$ex1' , '$ex2' , '$ex3')";
 		// echo $query;
 	}
 
 	else {
-		$query = "update tbl_rehab_treatments_221 set plan_id='$planId', title='$treatTitle', info='$treatInfo', time='$treatTime', treatment_status='$treatStatus', ex1='$ex1', ex2='$ex2', ex3='$ex3' where treatment_id='$treatmentId'";
+		$query = "UPDATE tbl_rehab_treatments_221 SET plan_id='$planId', title='$treatTitle', info='$treatInfo', time='$treatTime', treatment_status='$treatStatus', ex1='$ex1', ex2='$ex2', ex3='$ex3' where treatment_id='$treatmentId'";
 		// echo $query;
 	}
 
