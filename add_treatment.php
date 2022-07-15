@@ -86,14 +86,7 @@
                                 <div class="form-outline">
                                     <label class="visually-hidden" for="ex1">Excercise 1</label>
                                     <select id="ex1" class="select" name="ex1">
-                                        <option value="1">Reverse Lunges</option>
-                                        <option value="2">Skater Jumps</option>
-                                        <option value="3">Jumping Jacks</option>
-                                        <option value="4">One Legged Stand</option>
-                                        <option value="5">Push Ups</option>
-                                        <option value="6">Squats</option>
-                                        <option value="7">Situps</option>
-                                        <option value="8">Pull Ups</option>
+                                        
                                     </select>
                                 </div>
                             </article>
@@ -102,14 +95,7 @@
                                 <div class="form-outline">
                                     <label class="visually-hidden" for="ex2">Excercise 2</label>
                                     <select id="ex2" class="select" name="ex2">
-                                        <option value="1">Reverse Lunges</option>
-                                        <option value="2">Skater Jumps</option>
-                                        <option value="3">Jumping Jacks</option>
-                                        <option value="4">One Legged Stand</option>
-                                        <option value="5">Push Ups</option>
-                                        <option value="6">Squats</option>
-                                        <option value="7">Situps</option>
-                                        <option value="8">Pull Ups</option>
+                                        
                                     </select>
                                 </div>
                             </article>
@@ -118,14 +104,7 @@
                                 <div class="form-outline">
                                     <label class="visually-hidden" for="ex3">Excercise 3</label>
                                     <select id="ex3" class="select" name="ex3">
-                                        <option value="1">Reverse Lunges</option>
-                                        <option value="2">Skater Jumps</option>
-                                        <option value="3">Jumping Jacks</option>
-                                        <option value="4">One Legged Stand</option>
-                                        <option value="5">Push Ups</option>
-                                        <option value="6">Squats</option>
-                                        <option value="7">Situps</option>
-                                        <option value="8">Pull Ups</option>
+                                        
                                     </select>
                                 </div>
 
@@ -143,6 +122,7 @@
                     </section>
                 </section>
         </main>
+        <script src="includes/js/fetchExe.js"></script>
 
 	</body>
 
