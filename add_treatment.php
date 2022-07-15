@@ -114,7 +114,6 @@
                             <input type="hidden" name="state" value="<?php echo $state;?>">
                             <input type="hidden" name="userId" value="<?php echo $userId;?>">
                             <input type="hidden" name="planId" value="<?php echo $row["plan_id"];?>">
-                            <input type="hidden" name="treatmentId" value="<?php echo $row["treatment_id"];?>">
 
 
                             <button type="submit" class="btn btn-outline-primary btn-block mb-4 mb-3">Save</button>
