@@ -83,17 +83,17 @@
 
                             <div class="mb-3">
                                 <label for="treatTitle" class="form-label">Treatment Title</label>
-                                <input type="text" class="form-control" id="treatTitle" name="treatTitle" value="<?php echo $row["title"];?>">
+                                <input type="text" class="form-control" id="treatTitle" name="treatTitle" value="<?php echo $row['title'];?>">
                             </div>
 
                             <div class="mb-3">
                                 <label for="treatInfo" class="form-label">Treatment Information</label>
-                                <input type="text" class="form-control" id="treatInfo" name="treatInfo" value="<?php echo $row["info"];?>">
+                                <input type="text" class="form-control" id="treatInfo" name="treatInfo" value="<?php echo $row['info'];?>">
                             </div>
                             
                             <div class="mb-3">
                                 <label for="treatTime" class="form-label">Treatment Time</label>
-                                <input type="text" class="form-control" id="treatTime" name="treatTime" value="<?php echo $row["time"];?>">
+                                <input type="text" class="form-control" id="treatTime" name="treatTime" value="<?php echo $row['time'];?>">
                             </div>
 
                             <div class="mb-3">
