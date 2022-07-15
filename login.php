@@ -95,7 +95,7 @@
                         <form  class="logForm" action="#" method="post" id="frm" autocomplete="off">
                             <article class="form-floating">
                                 <input type="email" name="loginMail" class="form-control" id="loginMail"
-                                    placeholder="name@example.com" aria-describedby="emailHelp" autocomplete="off" required>
+                                    placeholder="name@example.com" autocomplete="off" required>
                                 <label for="loginMail">Email</label>
                             </article>
 

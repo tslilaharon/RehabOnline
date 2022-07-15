@@ -224,7 +224,7 @@
             if($result) mysqli_free_result($result);
         ?>
 
-        <script src="includes/js/Chart.js"></script>
+        <script src="includes/js/chart.js"></script>
     </body>
 </html>
 

@@ -15,7 +15,7 @@
     $treatmentId = $_GET['treatmentId'];
     $treatStatus = 'new';
 
-    $query = "SELECT * FROM tbl_rehab_treatments_221";
+    $query = "SELECT * FROM tbl_rehab_treatments_221 WHERE treatment_id=$treatmentId";
 
 	$result = mysqli_query($connection, $query);
 	if($result) {

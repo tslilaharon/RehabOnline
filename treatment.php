@@ -20,7 +20,7 @@
     ON t.plan_id = p.plan_id
     JOIN tbl_rehab_users_221 AS u
     ON p.user_id = u.user_id
-    WHERE u.user_id = $userId";
+    WHERE t.treatment_id = $treatmentId";
 
     $result = mysqli_query($connection, $query);
     if($result) {
@@ -31,7 +31,6 @@
         header('Location: ' . URL . 'err.php');
     }
     $ex1 = $row["ex1"];
-    echo $ex1;
     $ex2 = $row["ex2"];
     $ex3 = $row["ex3"];
 
